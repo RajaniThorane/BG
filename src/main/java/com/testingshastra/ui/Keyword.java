@@ -1,8 +1,17 @@
 package com.testingshastra.ui;
 
-public class Keyword {
-public void openBrowser() {
-	// TODO Auto-generated method stub
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Keyword {
+WebDriver driver;	
+@Test
+public void openBrowser() {
+	WebDriverManager.chromedriver().setup();
+	driver=new ChromeDriver();
+	driver.get("http://www.gmail.com");
 }
 }
